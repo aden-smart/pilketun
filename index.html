@@ -1,61 +1,13 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pemilihan Ketua MPK</title>
-    <link rel="stylesheet" href="style.css" /> 
-</head>
-<body>
-<div class="container">
-
-    <h1 class="title">PEMILIHAN KETUA MPK</h1>
-
-    <div id="identityForm">
-        <label>Nama Lengkap:</label>
-        <input type="text" id="fullnameInput" placeholder="Masukkan nama lengkap">
-
-        <label>Pilih Role:</label>
-        <select id="roleSelect" onchange="loadSubRole()">
-            <option value="" disabled selected hidden>-- Pilih Kategori Anda --</option>
-            
-            <option value="guru">Guru</option>
-            <option value="ekskul">Ketua Ekstrakurikuler</option>
-            <option value="anggota_mpk">Anggota MPK</option>
-            <option value="anggota_osis">Anggota OSIS</option>
-            <option value="perwakilan_kelas">Perwakilan Kelas</option>
-        </select>
-
-        <div id="subRoleContainer"></div> 
-
-        <button class="btn" onclick="proceedToVote()">Lanjut</button>
-    </div>
-
-    <div id="voteSection" class="hidden">
-        <h2 class="subtitle">Pilih Kandidat</h2>
-
-        <div id="candidateContainer" class="grid"></div>
-
-        <div id="reasonContainer" class="hidden">
-            <label>Alasan Memilih:</label>
-            <textarea id="reasonInput" placeholder="Tulis alasan kamu memilih kandidat (wajib)..."></textarea>
-            <button class="btn" onclick="submitVote()">Submit Vote</button>
-        </div>
-        
-    </div>
-</div>
-
-<div id="visiModal" class="modal hidden">
-    <div class="modal-content">
-        <span class="close" onclick="closeVisi()">×</span>
-        <h2 id="modalName"></h2>
-        <h3 class="subtitle-modal">Visi</h3>
-        <p id="modalVisi"></p>
-        <h3 class="subtitle-modal">Misi & Program Unggulan</h3>
-        <p id="modalMisi"></p>
-    </div>
-</div>
-
-<script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sistem Pemilihan Ketua MPK SMK Negeri 1 Cianjur" />
+    <title>Pemilihan Ketua MPK - SMK Negeri 1 Cianjur</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

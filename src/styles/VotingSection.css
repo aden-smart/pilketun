@@ -1,0 +1,49 @@
+.voting-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(122, 44, 44, 0.95);
+  backdrop-filter: blur(10px);
+  padding: clamp(24px, 5vw, 40px);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 221, 102, 0.1);
+}
+
+.candidates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.reason-form {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 2px solid rgba(255, 221, 102, 0.2);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .candidates-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .voting-container {
+    padding: 20px;
+  }
+}
